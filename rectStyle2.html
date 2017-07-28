@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#cvs{border: 1px solid red;}
+			
+		</style>
+	</head>
+	<body>
+		<canvas id="cvs" width="500" height="500"></canvas>
+		
+		<script>
+			var cvs=document.getElementById("cvs");
+			if(cvs.getContext){
+				
+				var ctx=cvs.getContext('2d');
+				//填充颜色
+		        ctx.fillStyle = "red";
+		        ctx.fillRect(50,50,50,50);
+		        ctx.fillStyle = "blue";
+		        ctx.fillRect(150,150,50,50);
+		        
+		        //线宽
+		        ctx.lineWidth="15";
+		        ctx.strokeStyle="red";
+		        
+		        ctx.lineJoin="round";
+		        ctx.strokeRect(300,300,100,100);
+			}else{
+				
+				
+			}
+			
+		</script>
+	</body>
+</html>

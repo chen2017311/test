@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#cvs{border: 1px solid red;}
+			
+		</style>
+	</head>
+	<body>
+		<canvas id="cvs" width="600" height="600"></canvas>
+		
+		<script>
+			
+			var ctx=document.getElementById("cvs");
+			//判断兼容性
+			if (cvs.getContext){
+				
+				var ctx = cvs.getContext("2d");
+				//填充矩形
+				ctx.fillRect(100,100,100,100);
+				//边框矩形  x, y, w, h
+				ctx.strokeRect(100,100,50,50);
+				//清除矩形
+				ctx.clearRect(120,120,50,50);
+				//等比放大 （+）或缩小 （-）矩形  width/height  = topWidth/topHeight +/- [(bX - sX) * 2]
+//																			bx大的    sX小的
+
+				ctx.strokeRect(220,220,180,180);//等比放大
+				ctx.strokeRect(260,260,100,100);//原比例
+				ctx.strokeRect(300,300,20,20);//等比缩小
+				
+				//超出画布 只能留在画布里面
+				ctx.strokeRect(500,500,500,500);
+				
+			}else{
+				alert('不兼容')
+				
+			}
+			
+		</script>
+		
+	</body>
+</html>

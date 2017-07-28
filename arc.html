@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			
+			#cvs{border: 1px solid red;}
+		</style>
+	</head>
+	<body>
+		<canvas id="cvs" width="500" height="500"></canvas>
+		<script>
+			
+			var cvs=document.getElementById("cvs");
+			if(cvs.getContext){
+			
+			var ctx=cvs.getContext('2d');
+			
+			//圆的x y坐标是圆的中心点
+			ctx.arc(200,200,100,0,360*(Math.PI/180),false);
+			
+			ctx.moveTo(170,145);
+			ctx.arc(150,150,20,0,360*(Math.PI/180),false);
+			
+			ctx.moveTo(275,145);
+			ctx.arc(255,150,20,0,360*(Math.PI/180),false);
+			
+			ctx.moveTo(280,200);
+			ctx.arc(200,200,80,0,180*(Math.PI/180),false);
+			ctx.stroke();
+			
+			}
+		</script>
+	</body>
+</html>
